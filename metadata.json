@@ -1,0 +1,5 @@
+{
+  "name": "Twig: Nicholas's Space-Age Assistant",
+  "description": "A retro 60's space-age voice assistant for Nicholas Loubser, powered by Gemini Live API.",
+  "requestFramePermissions": ["microphone"]
+}

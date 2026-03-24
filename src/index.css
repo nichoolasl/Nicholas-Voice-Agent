@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-space-teal: #2d5a5a;
+  --color-space-orange: #f27d26;
+  --color-space-cream: #f5f2ed;
+  --color-space-blue: #1a2b3c;
+  --color-space-gold: #d4af37;
+}
+
+@layer base {
+  body {
+    @apply bg-space-blue text-space-cream font-sans;
+    background-image: radial-gradient(circle at 50% 50%, #1e3a5f 0%, #1a2b3c 100%);
+  }
+}
+
+.retro-card {
+  @apply bg-space-cream/10 backdrop-blur-md border-2 border-space-orange/30 rounded-[2rem] p-8 shadow-[0_0_30px_rgba(242,125,38,0.2)];
+}
+
+.atomic-button {
+  @apply bg-space-orange text-white font-bold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(242,125,38,0.5)] active:scale-95;
+}
+
+.orbit-animation {
+  animation: orbit 10s linear infinite;
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
